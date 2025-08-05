@@ -1,25 +1,30 @@
 <script lang="ts">
 	import ice_mountain from '$lib/assets/ice_mountain.avif';
-	import desert_mountain from '$lib/assets/ice_mountain.avif';
+	import desert_mountain from '$lib/assets/atacama_desert.avif';
+	import ice_mountain_2 from '$lib/assets/laguna verde.jpg';
+	import desert_mountain_2 from '$lib/assets/mountain.avif';
+	import { arrow_right } from '$lib/Icons.svelte';
 </script>
 
 <section class="px-6 pt-21 pb-13">
 	<article class="relative">
 		<div class="mx-auto max-w-140">
 			<div class="mb-5 grid gap-6 text-center">
-				<h2 class="text-5xl">Let's Make Our World Cleaner & Greener!</h2>
-				<p class="px-24">
+				<h2 class="text-5xl font-medium leading-tight">Let's Make Our World Cleaner & Greener!</h2>
+				<p class="px-24 text-base/snug">
 					We work with partners & communities to ensure nature thrives and climate change is
 					reversed
 				</p>
 			</div>
-			<div class="flex items-center justify-center gap-8">
+			<div class="flex items-center justify-center gap-8 text-base/none font-normal">
 				<a
 					href="/"
-					class="inline-flex rounded-full border border-gray-100 px-5 py-4 leading-none text-black"
-					>View Projects</a
+					class="inline-flex items-center gap-2 hover:bg-gray-100/10 rounded-full border border-gray-100 pl-5 pr-3 py-3 leading-none text-black"
+					>View Projects
+					<span class="w-4.5 aspect-square">{@render arrow_right()}</span>
+					</a
 				>
-				<a href="/" class="inline-flex items-center gap-2.5 text-black hover:underline"
+				<a href="/" class="inline-flex items-center gap-2.5 text-black underline-offset-3 transition-all duration-500 hover:underline"
 					><span class="bg-primary inline-flex h-2 w-2 rounded-full"></span>Learn More</a
 				>
 			</div>
@@ -32,7 +37,7 @@
 				class="border-primary aspect-square w-16 rounded-full border-2 object-cover"
 			/>
 			<img
-				src={ice_mountain}
+				src={desert_mountain}
 				alt="1"
 				class=" border-primary ml-20 aspect-square w-16 rounded-full border-2 object-cover"
 			/>
@@ -40,12 +45,12 @@
 
 		<div class="absolute top-12 right-1/8 inline-grid justify-items-end gap-2">
 			<img
-				src={ice_mountain}
+				src={ice_mountain_2}
 				alt="1"
 				class="border-primary aspect-square w-16 rounded-full border-2 object-cover"
 			/>
 			<img
-				src={ice_mountain}
+				src={desert_mountain_2}
 				alt="1"
 				class="border-primary mr-20 aspect-square w-16 rounded-full border-2 object-cover"
 			/>
@@ -55,11 +60,11 @@
 	<section class="mt-28 grid grid-cols-4">
 		<div class="relative aspect-3/2 overflow-hidden rounded-full">
 			<div class="h-full bg-neutral-50"></div>
-			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">We</p>
+			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[52px]/none font-semibold">We</p>
 		</div>
 		<div class="relative overflow-hidden rounded-full">
-			<img src={ice_mountain} alt="Ice mountain" class="block h-full" />
-			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">Protect</p>
+			<img src={ice_mountain_2} alt="Ice mountain" class="block h-full" />
+			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[52px]/none font-semibold">Protect</p>
 		</div>
 		<div class="relative overflow-hidden rounded-full">
 			<div class="bg-primary h-full"></div>
@@ -90,7 +95,7 @@
 		</div>
 		<div class="relative overflow-hidden rounded-full">
 			<img src={desert_mountain} alt="Desert mountain" class="block h-full" />
-			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">Nature</p>
+			<p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[52px]/none font-semibold">Nature</p>
 		</div>
 	</section>
 </section>

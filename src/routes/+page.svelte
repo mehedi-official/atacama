@@ -4,7 +4,7 @@
 	import avatar_02 from '$lib/assets/avatar_02.png';
 	import avatar_03 from '$lib/assets/avatar_03.png';
 	import volunteer from '$lib/assets/volunteer.png';
-	import { refresh, refresh_temp } from '$lib/Icons.svelte';
+	import { arrow_right, refresh, refresh_temp } from '$lib/Icons.svelte';
 	import Project from '@components/Project.svelte';
 	import Initiative from '@components/Initiative.svelte';
 	import Problem from '@components/Problem.svelte';
@@ -16,33 +16,46 @@
 	<section class="mt-5 grid grid-cols-2 gap-5">
 		<section class="bg-primary text-black-800 rounded-2xl px-12 py-36 text-center">
 			<div>
-				<p>Atacama Group</p>
-				<h1 class="text-6xl">Saving Nature & Fighting Climate Change Together.</h1>
+				<p class="flex items-center justify-center gap-2 text-sm/none font-semibold mb-4">
+					<span>
+						<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="2.5" height="23" transform="translate(10)" fill="#1E1F1A"/>
+							<rect width="2" height="23" transform="translate(19.3086 1.95605) rotate(45)" fill="#1E1F1A"/>
+							<rect width="2" height="23" transform="translate(2 3.41406) rotate(-45)" fill="#1E1F1A"/>
+							<circle cx="11" cy="11" r="3" fill="#1E1F1A"/>
+							<rect width="22" height="2" transform="translate(0 10)" fill="#1E1F1A"/>
+						</svg>
+					</span>
+					Atacama Group</p>
+				<h1 class="text-6xl/tight font-medium">Saving <span
+				class="inline-flex -translate-y-2 aspect-square w-14 items-center justify-center justify-self-end rounded-full border  transition-all duration-300 -rotate-45 border-dashed border-black-800  p-3.5"
+				>{@render arrow_right()}</span
+			> Nature & Fighting <span class="underline underline-offset-8 decoration-2">Climate</span> Change Together.</h1>
 			</div>
 			<div class="mt-8">
 				<div class="flex justify-center gap-3">
 					<input
-						class=" block rounded-full bg-white/40 px-5 py-4"
+						class="text-base/none font-medium block rounded-full bg-white/40 px-5 py-4"
 						type="email"
 						placeholder="Enter your email"
 					/>
-					<button class="rounded-full bg-white px-5 py-4">Subscribe</button>
+					<button class="rounded-full cursor-pointer bg-white px-5 py-4 flex items-center gap-2 text-base/none font-medium">Subscribe <span class="flex w-4 h-4">{@render arrow_right()}</span></button>
 				</div>
 				<div class="mt-5 flex items-center justify-center gap-3">
 					<div class="flex items-center select-none">
-						<span class="h-8 w-8 overflow-hidden rounded-full border-2 border-white bg-gray-500"
+						<span class="w-10 h-10 overflow-hidden rounded-full border-2 border-white bg-gray-500"
 							><img src={avatar_01} alt="Avatar 01" /></span
 						>
 						<span
-							class="-ml-2 h-8 w-8 overflow-hidden rounded-full border-2 border-white bg-gray-500"
+							class="-ml-2 w-10 h-10 overflow-hidden rounded-full border-2 border-white bg-gray-500"
 							><img src={avatar_02} alt="Avatar 01" /></span
 						>
 						<span
-							class="-ml-2 h-8 w-8 overflow-hidden rounded-full border-2 border-white bg-gray-500"
+							class="-ml-2 w-10 h-10 overflow-hidden rounded-full border-2 border-white bg-gray-500"
 							><img src={avatar_03} alt="Avatar 01" /></span
 						>
 					</div>
-					<p class="max-w-48 text-left">1.7M+ members of our charity organization</p>
+					<p class="max-w-48 text-left text-sm/tight">1.7M+ members of our charity organization</p>
 				</div>
 			</div>
 		</section>

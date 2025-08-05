@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
+	--font-sans: 'Gilroy';
 	--color-*: initial;
 	--color-primary: #ecf96e;
 	--color-black-700: #323433;
